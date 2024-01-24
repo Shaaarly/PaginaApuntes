@@ -1,54 +1,10 @@
+/* Estilos generales */
+
 html,
 body {
     margin: 0;
     padding: 0;
-}
-
-main {
-    overflow: hidden;
-}
-
-main li:hover {
-    transform: scale(1.2);
-}
-
-
-main li:hover i {
-    transform: scale(1.3);
-}
-
-main i {
-    color: black;
-}
-
-main ul {
-    list-style: none;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    place-items: center;
-    margin: 10px;
-    overflow: hidden;
-}
-
-main li {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    transition: transform 0.3s ease-in-out;
-    font-size: 10px;
-}
-
-
-main li i {
-    font-size: 3em;
-    color: #333;
-    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
 }
 
 .contenedor {
@@ -61,18 +17,22 @@ main li i {
     margin-top: 20px;
 }
 
+h1,
 h2 {
     text-align: center;
 }
 
 .background {
     max-width: 100%;
-    position: absolute;
+    position: fixed;
     z-index: -1;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
 }
 
 nav {
-    background-color: #242323;
+    background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0%));
     height: 100px;
     display: flex;
     justify-content: center;
@@ -94,8 +54,362 @@ nav a {
     height: 100%;
 }
 
-footer {
-    background-color: black;
+/* Estilos pagina inicio */
+
+.contenedorInicio {
+    height: 350px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.botonInicio {
     height: 40px;
-    margin: 0;
+    background-color: rgba(118, 118, 118, 0.8);
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.botonInicio p {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.botonInicio:hover {
+    transform: scale(1.3);
+    background-color: rgba(78, 78, 255, 80%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos pagina lenguajes */
+
+main {
+    overflow: hidden;
+    height: 100%;
+}
+
+main li:hover {
+    transform: scale(1.3);
+}
+
+
+main li:hover i {
+    transform: scale(1.5);
+}
+
+main i {
+    color: black;
+}
+
+main ul {
+    list-style: none;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: center;
+    margin: 10px;
+    overflow: hidden;
+}
+
+main li {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 10px;
+    transition: transform 0.3s ease-in-out;
+    font-size: 10px;
+}
+
+main li i {
+    font-size: 3em;
+    color: #333;
+    transition: transform 0.3s ease-in-out;
+}
+
+main a {
+    text-decoration: none;
+    color: black;
+}
+
+.contenedor_lenguajes {
+    display: flex;
+    height: 100vh;
+    transition: margin-left 0.3s;
+}
+
+.contenedor_lenguajes main {
+    background-color: rgba(255, 255, 255, 70%);
+    width: 100%;
+    margin-right: 1%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.contenedor_lenguajes section {
+    border-bottom: 1px solid black;
+}
+
+/* Botones de cada lenguaje */
+
+.lenguajeHtml:hover::before {
+    content: "Html";
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 400%);
+}
+
+.lenguajeCss:hover::before {
+    content: "Css";
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 400%);
+}
+
+.lenguajeJava:hover::before {
+    content: "Java";
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 400%);
+}
+
+.lenguajeJs:hover::before {
+    content: "JavaScript";
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 400%);
+}
+
+.lenguajeSql:hover::before {
+    content: "MySql";
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 400%);
+}
+
+.lenguajeGithub:hover::before {
+    content: "Github";
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 400%);
+}
+
+.lenguajePhp:hover::before {
+    content: "Php";
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 400%);
+}
+
+.lenguajePython:hover::before {
+    content: "Python";
+    display: block;
+    position: absolute;
+    background-color: #f9f9f9;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 400%);
+}
+
+/* == ASIDE == */
+
+aside {
+    background: linear-gradient(to right, rgb(92, 92, 92), rgba(255, 255, 255, 70%));
+    width: 0;
+    overflow-x: hidden;
+    transition: width 0.3s;
+}
+
+aside ul a {
+    text-decoration: none;
+    color: black;
+}
+
+.toggle-btn {
+    cursor: pointer;
+    color: black;
+    transition: transform 0.7s ease;
+}
+
+.barra-btn {
+    z-index: 0;
+    font-size: 24px;
+    height: 100%;
+    width: 1%;
+    background-color: rgba(255, 255, 255, 70%);
+    display: flex;
+    align-items: center;
+}
+
+.toggle-btn.open {
+    transform: rotateY(180deg);
+    transition: transform 0.7s ease;
+}
+
+.contenedor_lenguajes.open {
+    margin-left: 0;
+}
+
+.contenedor_lenguajes.open aside {
+    width: 200px;
+}
+
+.indice-btn {
+    cursor: pointer;
+    color: black;
+    transition: transform 0.7s ease;
+}
+
+.indice-btn.open {
+    transform: rotateX(180deg);
+    transition: transform 0.7s ease;
+}
+
+.indice {
+    list-style: none;
+    padding-left: 20px;
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.01s ease, height 1s ease-out;
+}
+
+.indice.open {
+    opacity: 1;
+    height: auto;
+    transition: opacity 0.5s ease, height 1s ease-out;
+}
+
+.indice.open li {
+    padding: 5%;
+}
+
+aside ul {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+/* Estilos del form */
+
+form {
+    margin: 0 auto;
+}
+
+fieldset {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+fieldset div {
+    padding: 2%;
+    margin: 0 auto;
+    width: 120%;
+}
+
+fieldset input {
+    border-radius: 5px;
+    width: 80%;
+    height: 40px;
+}
+
+textarea {
+    border-radius: 10px;
+    width: 80%;
+}
+
+.boton-form {
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    width: 80%;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease;
+}
+
+.boton-form:hover {
+    background-color: rgba(78, 78, 255, 80%);
+    color: white;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease;
+}
+
+::placeholder {
+    color: blue;
+    text-align: center;
+    padding: 1%;
+}
+
+/* == FOOTER == */
+
+footer {
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0%));
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+footer:hover {
+    opacity: 1;
 }
