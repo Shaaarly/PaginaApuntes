@@ -1,0 +1,1 @@
+<script src="/paginaapuntes/common/js/script.js"></script>
